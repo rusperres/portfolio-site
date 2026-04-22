@@ -19,12 +19,25 @@ export default function ContactPage() {
       email: form.get("email"),
       message: form.get("message"),
     }
+    
+    console.log(data)
 
-    await fetch("/api/contact", {
-      method: "POST",
-      body: JSON.stringify(data),
+    const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
     })
 
+    const result = await res.json()
+    console.log("API response:", result)
+
+    if (!res.ok) {
+    alert("Failed to send message")
+    setLoading(false)
+    return
+    }
     setLoading(false)
     alert("Message sent!")
   }

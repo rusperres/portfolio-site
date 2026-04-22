@@ -4,34 +4,26 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json()
-    const { name, email, message } = body
+    const { name, email, message } = await req.json()
 
-    if (!name || !email || !message) {
-      return Response.json(
-        { error: "Missing fields" },
-        { status: 400 }
-      )
-    }
+    console.log("Incoming:", { name, email, message })
 
-    await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
-      to: "your-email@example.com",
+    const result = await resend.emails.send({
+      from: "Portfolio <onboarding@resend.dev>",
+      to: "jairusjaspervc@gmail.com",
       subject: `New message from ${name}`,
       replyTo: email,
-      text: `
-Name: ${name}
-Email: ${email}
-
-Message:
-${message}
-      `,
+      text: message,
     })
 
-    return Response.json({ success: true })
+    console.log("Resend result:", result)
+
+    return Response.json({ success: true, result })
   } catch (error) {
+    console.error("EMAIL ERROR:", error)
+
     return Response.json(
-      { error: "Failed to send email" },
+      { success: false, error: String(error) },
       { status: 500 }
     )
   }
