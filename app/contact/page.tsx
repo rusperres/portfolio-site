@@ -11,43 +11,52 @@ export default function ContactPage() {
     const { toast } = useToast()
     
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        e.preventDefault()
-        setLoading(true)
+    e.preventDefault()
+    setLoading(true)
 
-        const form = new FormData(e.currentTarget)
+    const form = e.currentTarget
 
-        const data = {
-            name: form.get("name"),
-            email: form.get("email"),
-            message: form.get("message"),
-        }
+    const formData = new FormData(form)
 
+    const data = {
+        name: String(formData.get("name") || ""),
+        email: String(formData.get("email") || ""),
+        message: String(formData.get("message") || ""),
+    }
+
+    try {
         const res = await fetch("/api/contact", {
-            method: "POST",
-            headers: {
+        method: "POST",
+        headers: {
             "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
+        },
+        body: JSON.stringify(data),
         })
 
         setLoading(false)
 
         if (res.ok) {
-            toast({
+        toast({
             title: "Message sent 🚀",
-            description: "I’ll get back to you as soon as possible.",
-            })
-            e.currentTarget.reset()
-        } else {
-            toast({
-            title: "Failed to send message",
-            description: "Please try again later.",
-            variant: "destructive",
-            })
-        }
-    }
+            description: "I’ll get back to you soon.",
+        })
 
-  
+        // ✅ safest reset method
+        form.reset()
+        } else {
+        toast({
+            title: "Failed to send message",
+            variant: "destructive",
+        })
+        }
+    } catch (err) {
+        setLoading(false)
+        toast({
+        title: "Something went wrong",
+        variant: "destructive",
+        })
+    }
+    } 
     return (
         <main className="py-24">
         <Container>
