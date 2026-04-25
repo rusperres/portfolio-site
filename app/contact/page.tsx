@@ -4,6 +4,8 @@ import { useState } from "react"
 import { Container } from "@/components/layout/Container"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { InlineWidget } from "react-calendly"
+
 
 type Errors = {
   name?: string
@@ -174,6 +176,22 @@ export default function ContactPage() {
           </span>
         </div>
 
+      <div className="mt-16">
+        <h2 className="text-xl font-semibold">
+          Book a call instead
+        </h2>
+
+        <p className="mt-2 text-sm text-muted-foreground">
+          Prefer talking? Schedule a free consultation.
+        </p>
+
+        <div className="mt-6">
+          <InlineWidget
+            url="https://calendly.com/jairusjaspervc/30min"
+            styles={{ height: "700px" }}
+          />
+        </div>
+      </div>
       </Container>
     </main>
   )
