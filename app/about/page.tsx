@@ -5,35 +5,57 @@ export default function AboutPage() {
     <main className="py-24">
       <Container>
 
-        <div className="max-w-2xl">
-          <h1 className="text-3xl font-bold tracking-tight">
-            About Me
+        <div className="max-w-3xl">
+          <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">
+            Helping businesses build <span className="text-foreground">better systems</span>.
           </h1>
-                <p className="mt-6 text-muted-foreground">
-                I’m currently a Computer Science student at Cebu Institute of Technology building
-                real-world web applications and freelance projects.
-                </p>
+          
+          <div className="mt-12 space-y-8 text-lg leading-relaxed text-muted-foreground">
+            <p>
+              I’m Jairus, a Computer Science student at Cebu Institute of Technology 
+              passionate about bridging the gap between complex engineering and practical business needs.
+            </p>
 
-                <p className="mt-4 text-muted-foreground">
-                I focus on developing modern web systems using Next.js, TypeScript, and
-                Tailwind CSS, with an emphasis on performance, usability, and scalable
-                architecture.
-                </p>
+            <p>
+              Whether it’s a **local business** like a clinic or barbershop looking to automate 
+              bookings, or a **SaaS startup** needing a high-performance frontend, I focus on 
+              delivering solutions that don’t just look good but actually work.
+            </p>
 
-                <p className="mt-4 text-muted-foreground">
-                I enjoy building SaaS applications and business systems such as dashboards,
-                CMS platforms, and automation tools that solve real operational problems.
-                </p>
+            <p>
+              My stack is focused on modern, reliable technologies like **Next.js**, **TypeScript**, 
+              and **Tailwind CSS**. I believe in clean code, scalable architecture, and most importantly, 
+              building things that solve real operational problems.
+            </p>
 
-                <p className="mt-4 text-muted-foreground">
-                I’ve worked on a SaaS AI resume builder, focusing on modern UI design
-                and user experience for generating and managing resumes.
-                </p>
+            <p>
+              Currently, I’m specializing in:
+            </p>
+            
+            <ul className="grid gap-4 md:grid-cols-2">
+              <li className="flex items-start">
+                <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
+                <span>Custom Business Dashboards & CRM systems</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
+                <span>Automated Booking & Appointment Platforms</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
+                <span>Modern SaaS Landing Pages & Interfaces</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
+                <span>API Integrations & Backend Automation</span>
+              </li>
+            </ul>
 
-                <p className="mt-4 text-muted-foreground">
-                My goal is to help businesses turn ideas into fast, reliable, and practical
-                web systems.
-                </p>
+            <p className="pt-8 border-t border-border">
+              Let’s turn your idea into a fast, reliable, and practical web system. 
+              I’m always open to discussing new projects and partnerships.
+            </p>
+          </div>
         </div>
 
       </Container>

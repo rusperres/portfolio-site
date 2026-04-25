@@ -4,66 +4,66 @@
    Base Theme Variables (shadcn)
 ------------------------------ */
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  --background: #ffffff;
+  --foreground: #0f172a;
 
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
 
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
 
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
+  --primary: #0f172a;
+  --primary-foreground: #f9fafb;
 
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
+  --secondary: #f9fafb;
+  --secondary-foreground: #0f172a;
 
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
 
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --accent: #3b82f6;
+  --accent-foreground: #f9fafb;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 222.2 84% 4.9%;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #3b82f6;
 
   --radius: 0.75rem;
 }
 
-/* Dark mode */
-.dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
+/* Dark mode (default based on Design.md goal) */
+.dark, :root[class~="dark"] {
+  --background: #0b0f19;
+  --foreground: #f9fafb;
 
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
+  --card: #111827;
+  --card-foreground: #f9fafb;
 
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
+  --popover: #111827;
+  --popover-foreground: #f9fafb;
 
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
+  --primary: #f9fafb;
+  --primary-foreground: #0b0f19;
 
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
+  --secondary: #1f2937;
+  --secondary-foreground: #f9fafb;
 
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
+  --muted: #1f2937;
+  --muted-foreground: #9ca3af;
 
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
+  --accent: #3b82f6;
+  --accent-foreground: #f9fafb;
 
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
+  --border: #1f2937;
+  --input: #1f2937;
+  --ring: #3b82f6;
 }
 
 /* Base styles */
