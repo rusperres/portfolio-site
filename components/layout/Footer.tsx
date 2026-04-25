@@ -25,8 +25,11 @@ export function Footer() {
             <Link href="/contact" className="transition-colors hover:text-foreground">
               Contact
             </Link>
-            <Link href="https://github.com" target="_blank" className="transition-colors hover:text-foreground">
+            <Link href="https://github.com/rusperres" target="_blank" className="transition-colors hover:text-foreground">
               GitHub
+            </Link>
+            <Link href="https://www.linkedin.com/in/jairus-jasper-colindres-0a1a4024a/" target="_blank" className="transition-colors hover:text-foreground">
+              LinkedIn
             </Link>
           </div>
 
