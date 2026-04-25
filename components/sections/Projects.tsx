@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Container } from "../layout/Container"
 import { Card, CardContent } from "@/components/ui/card"
 import { projects } from "@/content/projects"
+import Image from "next/image"
 
 export function Projects() {
   const featured = projects.filter((p) => p.featured)
@@ -27,8 +28,13 @@ export function Projects() {
             >
               <Card className="overflow-hidden hover:scale-[1.01] transition">
                 
-                <div className="aspect-video bg-muted" />
-
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={1200}
+                  height={800}
+                  className="aspect-video w-full object-cover"
+                />
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold">
                     {project.title}
