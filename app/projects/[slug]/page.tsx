@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation"
+import Image from "next/image"
 import { Container } from "@/components/layout/Container"
 import { projects } from "@/content/projects"
 
@@ -27,10 +28,17 @@ export default async function ProjectPage({
           {project.description}
         </p>
 
-        <div className="mt-10 aspect-video rounded-lg bg-muted" />
+        <Image
+          src={project.image}
+          alt={project.title}
+          width={1400}
+          height={900}
+          className="mt-10 aspect-video w-full rounded-lg object-cover border"
+        />
 
         <div className="mt-10">
           <h2 className="text-lg font-semibold">Tech Stack</h2>
+
           <div className="mt-3 flex flex-wrap gap-2 text-sm text-muted-foreground">
             {project.tech.map((t) => (
               <span key={t}>#{t}</span>

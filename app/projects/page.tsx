@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Container } from "@/components/layout/Container"
 import { Card, CardContent } from "@/components/ui/card"
 import { projects } from "@/content/projects"
@@ -19,13 +20,16 @@ export default function ProjectsPage() {
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
-            <Link
-              key={project.slug}
-              href={`/projects/${project.slug}`}
-            >
+            <Link key={project.slug} href={`/projects/${project.slug}`}>
               <Card className="overflow-hidden hover:scale-[1.01] transition">
-                
-                <div className="aspect-video bg-muted" />
+
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={1200}
+                  height={800}
+                  className="aspect-video w-full object-cover"
+                />
 
                 <CardContent className="p-6">
                   <h2 className="text-lg font-semibold">
@@ -41,6 +45,7 @@ export default function ProjectsPage() {
                       <span key={t}>#{t}</span>
                     ))}
                   </div>
+
                 </CardContent>
 
               </Card>
