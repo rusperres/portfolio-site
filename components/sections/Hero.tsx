@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Container } from "../layout/Container"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export function Hero() {
   return (
@@ -37,7 +38,12 @@ export function Hero() {
         <div className="hidden md:block">
           <div className="relative aspect-square w-full overflow-hidden rounded-2xl border-4 border-border bg-gradient-to-br from-muted to-muted/20 shadow-2xl">
             <div className="absolute inset-0 flex items-center justify-center text-sm font-medium text-muted-foreground/50">
-               [Your Photo Here]
+              <Image
+                src="/headshot.jpg"
+                alt="Headshot"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

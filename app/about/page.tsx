@@ -17,14 +17,14 @@ export default function AboutPage() {
             </p>
 
             <p>
-              Whether it’s a **local business** like a clinic or barbershop looking to automate 
-              bookings, or a **SaaS startup** needing a high-performance frontend, I focus on 
+              Whether it’s a local business like a clinic or barbershop looking to automate 
+              bookings, or a SaaS startup needing a high-performance frontend, I focus on 
               delivering solutions that don’t just look good but actually work.
             </p>
 
             <p>
-              My stack is focused on modern, reliable technologies like **Next.js**, **TypeScript**, 
-              and **Tailwind CSS**. I believe in clean code, scalable architecture, and most importantly, 
+              My stack is focused on modern, reliable technologies like Next.js, TypeScript, 
+              and Tailwind CSS. I believe in clean code, scalable architecture, and most importantly, 
               building things that solve real operational problems.
             </p>
 
