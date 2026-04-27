@@ -30,7 +30,7 @@ export function Projects() {
               <Card className="h-full overflow-hidden border-border transition-all duration-300 group-hover:border-accent/20 group-hover:shadow-md">
                 <div className="relative aspect-[16/9] w-full overflow-hidden">
                   <Image
-                    src={project.image}
+                    src={project.images[0]}
                     alt={project.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"

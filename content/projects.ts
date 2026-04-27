@@ -2,7 +2,7 @@ export type Project = {
   slug: string
   title: string
   description: string
-  image: string
+  images: string[]
   tech: string[]
   liveUrl?: string
   githubUrl?: string
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     title: "VelocityCV",
     description:
       "A SaaS-style resume builder with AI-powered content generation and modern UI.",
-    image: "/projects/velocitycv.png",
+    images: ["/projects/velocitycv.png"],
     tech: ["Next.js", "Tailwind", "Gemini API", "Vercel"],
     liveUrl: "https://velocitycv.vercel.app/",
     githubUrl: "https://github.com/rusperres/velocitycv",
@@ -56,7 +56,11 @@ export const projects: Project[] = [
     title: "Cliniqora",
     description:
       "A full-stack clinic appointment management system with role-based access control and administrative analytics.",
-    image: "/projects/cliniqora/homepage.png",
+    images: [
+      "/projects/cliniqora/homepage.png",
+      "/projects/cliniqora/patient-dashboard.png",
+      "/projects/cliniqora/staff-dashboard.png",
+    ],
     tech: ["Next.js", "Prisma", "PostgreSQL", "Supabase Auth", "Tailwind"],
     liveUrl: "https://cliniqora.vercel.app",
     githubUrl: "https://github.com/rusperres/cliniqora",

@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Container } from "@/components/layout/Container"
 import { projects } from "@/content/projects"
 import { Settings, Brain, Wrench, CheckCircle } from "lucide-react"
+import { ProjectGallery } from "@/components/sections/ProjectGallery"
 
 export default async function ProjectPage({
   params,
@@ -29,13 +30,7 @@ export default async function ProjectPage({
           {project.description}
         </p>
 
-        <Image
-          src={project.image}
-          alt={project.title}
-          width={1400}
-          height={900}
-          className="mt-10 aspect-video w-full rounded-lg object-cover border"
-        />
+        <ProjectGallery images={project.images} title={project.title} />
 
         <div className="mt-10">
           <h2 className="text-lg font-semibold">Tech Stack</h2>
